@@ -25,5 +25,24 @@ export async function kuchikuchi(req,res){
             response : data,
         }
     })
+}
+
+export async function getCoinGechoPrices(req, res) {
+    
+}
+
+export async function getContractData(req, res) {
+
+}
+
+export async function spitPublicKey(req, res) {
+
+}
+
+export async function returnJsonResponse(req, res) {
+
+}
+
+export async function useDB(req, res) {
 
 }

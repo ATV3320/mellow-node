@@ -1,1 +1,7 @@
 bun up the dance
+
+I have to fetch coin prices from apis... say coingecho or coinmarketcap.
+I have to fetch data from contract,
+Parameters function. derive public key from private key passed in the params.
+Respond stuff in json, even the code messages like 200, 300.
+Two apis, taking multiple private keys in json, returning/saving the public keys in db.
