@@ -1,0 +1,32 @@
+bun up the dance
+
+I have to fetch coin prices from apis... say coingecho or coinmarketcap.
+I have to fetch data from contract,
+Parameters function. derive public key from private key passed in the params.
+Respond stuff in json, even the code messages like 200, 300.
+Two apis, taking multiple private keys in json, returning/saving the public keys in db.
+
+browsers have js engine that takes js code, converts into code that computer can understand. eg. V8 and spiderMonkey.
+
+Earlier JS in browser was the only way, later we shifted it outside of the browser. Embedding it outside the browser, making it node, so nodejs is v8 engine 
+outside of the browser, in a cpp (not sure) file.
+So, since the environment has changed, we no more have the access to document.getElementById(""); etc...
+we only have fs.readFile(), and http.createServer().
+So, even though both chrome and node are using that v8 engine, runtime environments are different here.
+
+Hence, shifting more towards the definition that node is not a language or a framework, it is just a runtime environment 
+for executing js code.
+
+But how does the node work?
+And, why is it faster than alternatives? (Me typing this after watching numerous primeogen videos of rust and go)
+
+Well, node works in asynchronous manner, so when we have two tasks, say fetching the price of apples from an API, and then calculating two numbers,
+we can do them this way-> 
+We ask the API for price, meanwhile we print the calculated number, we don't wait around for the previous step to complete.
+However, we also should know that many times, we have to do await/async thing as the processes or method calls in the rest of the program are dependent
+on the result from our API call.
+We only have a single thread in node to handle all requests.
+Our thread doesn't wait around for the backend/API/databases to return the answers to its requests.
+There is an event queue where the backend/API/database can return what it was asked to do, and our thread can look at it after its current work is done (?)
+So, however node will work well when there are a lot of tasks, and not as many threads to deal with them, but it will wet the bed whenasked to do CPU intensive
+tasks.
