@@ -10,7 +10,7 @@ server.listen(8080, function() {
     console.log((new Date()) + ' Server is listening on port 8080');
 });
 
-wsServer = new WebSocketServer({
+var wsServer = new WebSocketServer({
     httpServer: server,
     // You should not use autoAcceptConnections for production
     // applications, as it defeats all standard cross-origin protection
@@ -45,7 +45,7 @@ wsServer.on('request', function(request: any) {
             connection.sendBytes(message.binaryData);
         }
     });
-    connection.on('close', function(reasonCode, description) {
+    connection.on('close', function(reasonCode: any, description: any) {
         console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
     });
 });
