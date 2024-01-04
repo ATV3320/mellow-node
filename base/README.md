@@ -1,0 +1,1 @@
+nodemon, mongoose, mongo, {firebase}, "sudo snap install insomnia", etc

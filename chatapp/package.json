@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/websocket": "^1.0.10",
     "http": "^0.0.1-security",
-    "websocket": "^1.0.34"
+    "websocket": "^1.0.34",
+    "zod": "^3.22.4"
   }
 }
