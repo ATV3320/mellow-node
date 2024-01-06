@@ -77,7 +77,7 @@ app.post('/productpost', async (req, res)=>{
     }
 })
 
-const link = process.env.mongoose_link //not working, why?
+const link = process.env.mongoose_link 
 mongoose.connect(link).then(() => {
     console.log("Connected to mongoDB")
     app.listen(port, () => {
